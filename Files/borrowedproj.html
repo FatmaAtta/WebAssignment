@@ -1,0 +1,57 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>{% block title %}Library{% endblock %}</title> -->
+    <link rel="stylesheet" href="style.css">
+    <title>Borrowed Books</title>
+</head>
+
+<body>
+    <div class="header-container">
+        <!-- <h1 align="center">Tale Tower Library</h1> -->
+        <div class="top">
+            <div class="left">
+                <!-- <div><a href="second_main.html"><img src="logo.jpg" height="30px"  alt="View Main Page"></a></div> -->
+                <div><a href="second_main.html">Home</a></div>
+                <div><a href="available.html">Available Books</a></div>
+                <div><a href="borrowedproj.html" class="active">Borrowed Books</a></div>
+            </div>
+            <div class="right">
+                <div><a href="#accountname">David Jones</a></div>
+                <div><a href="main.html">Sign Out</a></div>
+            </div>
+        </div>
+        <hr>
+        <div class="side">
+            <label>Categories</label>
+            <a href="scifi.html">Sci-Fi</a>
+            <a href="adventure.html">Adventure</a>
+            <a href="fantasy.html">Fantasy</a>
+            <a href="history.html">History</a>
+        </div>
+
+        <hr>
+
+        <!-- <h2>Borrowed Books</h2> -->
+        <div class="book_grid">
+            <div>
+                <h3 class="book_title">Foundation</h3>
+                <a href="Foundation_book.html" target="_blank"><img src="Foundation.jpg" alt="View Details of Foundation"
+                        width="200" height="300" class="book_img"></a>
+                <button>Return</button>
+            </div>
+            <div>
+                <h3>The Buried Giant</h3>
+                <a href="The Buried Giant_book.html" target="_blank"><img src="The Buried Giant.jpeg"
+                        alt="View Details of The Buried Giant" width="200" height="300"></a>
+                <button>Return</button>
+            </div>
+        </div>
+
+</body>
+
+</html>

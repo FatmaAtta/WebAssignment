@@ -1,0 +1,18 @@
+.hiddenDetails{
+    display:none;
+}
+#borrowedList{
+
+}
+.book-flex{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin:50px;
+}
+.book img{
+    height:300px;
+}
+.book{
+    margin:30px;
+}
