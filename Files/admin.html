@@ -15,10 +15,10 @@
         <a href="#name" class="right name">N</a>
         <a href="main.html" class="right signout">Sign Out</a>
     </div>
-    <button id="updateAvailableBooks">Update Available Books Page</button>
+    <!-- <button id="updateAvailableBooks">Update Available Books Page</button> -->
 
     <div class="book-flex" id="admin_available">
-        <div class="book">
+        <!-- <div class="book">
             <a href="admin_details.html?book=Ancient_Egypt">
                 <div class="hiddenDetails">
                     <p class="title">Ancient Egypt</p>
@@ -223,11 +223,13 @@
             <img src="Treasure Island.jpeg"
                 alt="View Details of Ancient Egypt: An Illustrated History" width="200" height="300"></a>
                 <button onclick="deleteBook(this)">Delete Book</button>
-        </div>
+        </div> -->
     </div>
 
-    
-    <script src="addBook.js"></script>
-    <script src="deleteBook.js"></script>
+    <script type="module" src="localStorage.js"></script>
+    <script type="module" src="addBook.js"></script>
+    <script type="module" src="displayBook.js"></script>
+    <!-- <script src="addBook.js"></script> -->
+    <!-- <script src="deleteBook.js"></script> -->
 </body>
 </html>
