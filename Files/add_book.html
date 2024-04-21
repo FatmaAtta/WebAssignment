@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin_details_page.css">
     <title>Add Book</title>
 
 </head>
 <body>
     <div class="top_nav_admin">
-        <a href="admin.html" class="left logo"><div><img src="logo_nobg.png" height="60px"></div></a>
+        <a href="admin.html" class="left logo"><div><img src="img/logo_nobg.png" height="60px"></div></a>
         <a href="admin.html" class="left"><div>Available Books</div></a>
         <a href="add_book.html" class="left active"><div>Add a Book</div></a>
         <a href="#name" class="right name">N</a>
@@ -30,10 +31,10 @@
         <label for="imageURL">Image URL:</label>
         <input type="text" id="imageURL" name="imageURL"><br>
         <label for="description">Description:</label><br>
-        <textarea id="description" name="description" rows="4" cols="50"></textarea><br>
+        <textarea id="description" name="description" rows="10" cols="50"></textarea><br>
         <input type="submit" value="Add Book">
     </form>
-    <script type="module" src="localStorage.js"></script>
-    <script type="module" src="addBook.js"></script>
+    <script type="module" src="js/localStorage.js"></script>
+    <script type="module" src="js/addBook.js"></script>
 </body>
 </html>

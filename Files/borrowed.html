@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="borrowed.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/borrowed.css">
     <title>Borrowed Books</title>
 
 </head>
 <body>
     <div class="top_nav">
-        <a href="second_main.html" class="left logo"><div><img src="logo_nobg.png" height="60px"></div></a>
-        <a href="second_main.html" class="left"><div>Available Books</div></a>
+        <a href="second_main.html" class="left logo"><div><img src="img/logo_nobg.png" height="60px"></div></a>
+        <a href="availableBooks.html" class="left"><div>Available Books</div></a>
         <a href="borrowed.html" class="left active"><div>Borrowed Books</div></a>
         <a href="#cat" class="left category">
             <div class="categories">
@@ -24,7 +24,7 @@
                 </div>
             </div></a>
             <div class="left search">
-                <button onclick="search()" class="s-button"><img src="magnifying-glass.png" height="30px"></button>
+                <button onclick="search()" class="s-button"><img src="img/magnifying-glass.png" height="30px"></button>
                 <input type="search" placeholder="Search by title, author, or category ..." name="q" class="search_bar" id="searchInput">
             </div>
         <a href="#name" class="right name">N</a>
@@ -32,43 +32,13 @@
     </div>
 
     <div class="book-flex" id="borrowedList">
-        <!-- <div class="book">
-            <a href="book_details.html?book=Ancient_Egypt">
-                <div class="hiddenDetails">
-                    <p class="title">Ancient Egypt</p>
-                    <p class="author">Lucia Gahlin</p>
-                    <p class="category">History</p>
-                    <p class="description">Ancient Egypt by Lucia Gahlin is a comprehensive -guide to the mythology, religion, and history of ancient Egypt. 
-                        The book explores the awe-inspiring temples, tombs, and other sacred sites of the world is first great civilization. 
-                        It includes a chronology of ancient Egypt that charts the evolution of the society that emerged over 5,000 years ago and flourished for three millennia. 
-                        The book is written in an engaging and accessible style, making it an ideal introduction to the wonders of ancient Egypt.</p>
-                </div>
-            <img src="Ancient_Egypt.jpeg"
-                alt="View Details of Ancient Egypt: An Illustrated History" width="200" height="300"></a>
-        </div>
-
-        <div class="book">
-            <a href="book_details.html?book=Deliverance">
-                <div class="hiddenDetails">
-                    <p class="title">Deliverance</p>
-                    <p class="author">James Dickey</p>
-                    <p class="category">Sci-Fi</p>
-                    <p class="description">Deliverance is a novel written by James Dickey,published in 1970, that tells the story of four middle-aged men who embark on a canoe trip in the Georgia wilderness. 
-                        The novel explores themes of masculinity, survival, and the human condition. 
-                        The men encounter dangerous mountain men, leading to violent confrontations and a struggle for survival. 
-                        The novel is known for its vivid descriptions of the wilderness and the psychological impact of the events on the characters.
-                        It was adapted into a successful film in 1972,directed by John Boorman.</p>
-                </div>
-            <img src="Deliverance.jpeg"
-                alt="View Details of Ancient Egypt: An Illustrated History" width="200" height="300"></a>
-        </div> -->
+    
     </div>
-    <script type="module" src="available.js"></script>
-    <script type="module" src="borrow.js"></script>
-    <script type="module" src="localStorage.js"></script>
-    <script type="module" src="displayBook.js"></script>
-    <script type="module" src="addBook.js"></script>
-    <script src="filter.js"></script>
-    <!-- <script src="handleBorrow.js"></script> --> 
+    <script type="module" src="js/available.js"></script>
+    <script type="module" src="js/borrow.js"></script>
+    <script type="module" src="js/localStorage.js"></script>
+    <script type="module" src="js/displayBook.js"></script>
+    <script type="module" src="js/addBook.js"></script>
+    <script src="js/filter.js"></script>
 </body>
 </html>

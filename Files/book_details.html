@@ -1,12 +1,10 @@
-<html><!--Fantasy_books-->
+<html>
 
 <head>
     <meta charset="utf-8">
-    <title>The Changeling book</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="module" src="localStorage.js"></script>
-    <!-- <script type="module" src="displayBook.js"></script> -->
-    <!-- <script src="script_test.js"></script> -->
+    <title>Book Details</title>
+    <script type="module" src="js/localStorage.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <style>
          body{
             background-color: antiquewhite;
@@ -42,7 +40,7 @@
 <body>
     
         <div class="top_nav">
-            <a href="available.html" class="left logo"><div><img src="logo_nobg.png" height="60px"></div></a>
+            <a href="second_main.html" class="left logo"><div><img src="img/logo_nobg.png" height="60px"></div></a>
             <a href="available.html" class="left"><div>Available Books</div></a>
             <a href="borrowed.html" class="left"><div>Borrowed Books</div></a>
             <a href="#cat" class="left category">
@@ -56,7 +54,7 @@
                     </div>
                 </div></a>
             <div class="left search">
-                <button type="submit" class="s-button"><img src="magnifying-glass.png" height="30px"></button>
+                <button type="submit" class="s-button"><img src="img/search.png" height="30px"></button>
                 <input type="search" placeholder="Search by title, author, or category ..." name="q" class="search_bar">
             </div>
             <a href="#name" class="right name">N</a>
@@ -74,7 +72,7 @@
         <dt><h2>Description :</h2></dt>
         <dd id="Description"></dd>
     </dl>
-        <script src="book_details.js"></script>
+        <script src="js/book_details.js"></script>
 </body>
 
 </html>
