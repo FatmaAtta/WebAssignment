@@ -1,32 +1,59 @@
 import {Book} from './localStorage.js';
+// import {update} from './displayBook.js';
 
-const url = new URLSearchParams(window.location.search);
-const img = url.get('imageURL');
-const title=url.get('title');
-const author=url.get('author');
-const category=url.get('category');
-const description=url.get('description');
-const book = new Book(title,author,category,description,img,true);
-let books=JSON.parse(localStorage.getItem("Books")) || [];
-books.push(book);
-console.log(books);
-localStorage.setItem("Books",JSON.stringify(books));
-
-// const addBookForm = document.getElementById('addBookForm');
-//     addBookForm.addEventListener('submit', function(event){
-//             event.preventDefault();
-//             const title = document.getElementById("title").value;
-//             const author = document.getElementById("author").value;
-//             const category = document.getElementById("category").value;
-//             const description = document.getElementById("description").value;
-//             const imgUrl = document.getElementById("imageURL").value; 
-//             const book = new Book(title,author,category,description,imgUrl,true);
-//             let books=JSON.parse(localStorage.getItem("Books"));
-//             books.push(book);
-//             localStorage.setItem("Books",JSON.stringify(books));
-//     });
+// const url = new URLSearchParams(window.location.search);
+// const img = url.get('imageURL');
+// const title=url.get('title');
+// const author=url.get('author');
+// const category=url.get('category');
+// const description=url.get('description');
+// const book = new Book(title,author,category,description,img,true);
+// console.log("before function is called");
+// // update(book);
+// console.log("after function is called");
+// let books=JSON.parse(localStorage.getItem("Books")) || [];
+// books.push(book);
+// console.log(books);
+// localStorage.setItem("Books",JSON.stringify(books));
+// console.log(JSON.parse(localStorage.getItem("Books")));
 
 
+
+
+
+
+const addBookForm = document.getElementById('addBookForm');
+    addBookForm.addEventListener('submit', function(event){
+        console.log("clicked");
+            event.preventDefault();
+            const title = document.getElementById("title").value;
+            const author = document.getElementById("author").value;
+            const category = document.getElementById("category").value;
+            const description = document.getElementById("description").value;
+            const imgUrl = document.getElementById("imageURL").value; 
+            const book = new Book(title,author,category,description,imgUrl,true);
+            let books=JSON.parse(localStorage.getItem("Books"))||[];
+            books.push(book);
+            localStorage.setItem("Books",JSON.stringify(books));
+    });
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     console.log("DOMContentLoaded event fired");
+//     const book_flex = document.getElementById('available-books');
+//     const books=book_flex.querySelectorAll('.book');
+//     console.log("hey");
+//     console.log(book_flex);
+//     console.log(books);
+//     console.log("hey");
+//     console.log(books.length);
+//     for(let i=0;i<books.length;i++){
+//         console.log(i);
+//         const book=books[i];
+//         const borrowButton=book.querySelector('borrowBook');
+//         borrowButton.addEventListener('click',function(event){
+//             console.log("Borrow button clicked for book:", book);
+//         });
+//     }
 // const addBookForm = document.getElementById('addBookForm');
 //     addBookForm.addEventListener('submit', function(event){
 //             event.preventDefault();
