@@ -38,14 +38,13 @@ def sign_in(request):
             user=authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                print("one")
                 messages.success(request, "Welcome Back!", extra_tags= 'success')
                 if user.isAdmin:
                     return redirect('admin_page')
                 else:
                     return redirect('available_books')
             else:
-                print("two")
+                print(form.errors)
                 messages.error(request, "Invalid Credentials", extra_tags= 'unsuccess')
     return render(request, 'signin_page.html', {'form':form})
 
