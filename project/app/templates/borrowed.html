@@ -12,7 +12,15 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/borrowed.css' %}">
     <div class="book-flex" id="borrowedList">
-    
+        <div class="book-flex" id="available-books">
+            {%for book in books%}
+            <!-- must use .url -->
+            <div class="book"><a href="{% url 'book_details' book.book_id %}">
+                <div class="cover"><img src="{{book.cover_page.url}}"></div></a>
+                <a href="{% url 'return_book' book.book_id%}"><button class="returnBook">Return</button></a>
+            </div>
+            {% endfor %}
+        </div>
     </div>
     {% endblock %}
 </body>

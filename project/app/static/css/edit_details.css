@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 90vh;
+    width: 100%;
+}
+
+.left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* Center vertically */
+    align-items: center;
+}
+
+.left-column {
+    flex: 1;
+    /* margin-right: 10px; */
+}
+
+.right-column {
+    flex: 2;
+    margin:0;
+}
+
+h1, h2, dl {
+    margin: 0,5px;
+}
+
+hr {
+    margin: 10px 0;
+}
+
+#book_img{
+    height:300px;
+}
+
+button{
+    width:50%;
+    margin-left:25%;
+}
+
+#dTitle{
+    margin-left:25%;
+    font-size: 40px;
+}

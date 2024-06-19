@@ -19,10 +19,13 @@
             <div class="categories">
                 <div class="ctitle">Categories</div>
                 <div class="hidden">
-                    <div class="cat" onclick="scifi()">Sci-Fi</div>
-                    <div class="cat" onclick="adventure()">Adventure</div>
-                    <div class="cat" onclick="fantasy()">Fantasy</div>
-                    <div class="cat" onclick="history()">History</div>
+                    <div class="cat" >Sci-Fi</div>
+                    <div class="cat" >Fantasy</div>
+                    <div class="cat" >Horror</div>
+                    <div class="cat" >Romance</div>
+                    <div class="cat" >History</div>
+                    <div class="cat" >Adventure</div>
+                    <div class="cat" >Thriller</div>
                 </div>
             </div></a>
         <div class="left search">
@@ -36,10 +39,11 @@
     <div class="book-flex" id="available-books">
         {%for book in books%}
         <!-- must use .url -->
-        <div class="book">
-            <div class="cover {% if not book.is_available %}unavailable{% endif %}"><img src="{{book.cover_page.url}}"></div>
+        <div class="book"><a href="{% url 'book_details' book.book_id %}">
+            <!-- <p>{{ book.name }}</p> -->
+            <div class="cover {% if not book.is_available %}unavailable_cover{% endif %}"><img src="{{book.cover_page.url}}"></div></a>
             {% if book.is_available %}
-                <button class="borrow">Borrow</button>
+            <a href="{% url 'borrow' book.book_id %}"><button class="borrow">Borrow</button></a>
             {% endif %}
             {% if not book.is_available %}
                 <button class="unavailable">Unavailable</button>
