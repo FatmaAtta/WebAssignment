@@ -10,6 +10,29 @@
   <link rel="stylesheet" href="{% static 'css/form.css' %}">
 </head>
 <body>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}}">{{message}}</div>
+    {% endfor %}
+    {% endif %}
+    <style>
+        .alert {
+            padding: 20px;
+            margin-bottom: 15px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+        .alert-success {
+        color: #3c763d;
+        background-color: #dff0d8;
+        border-color: #d6e9c6;
+        }
+        .alert-unsuccess, .alert-error {
+            color: #a94442;
+            background-color: #f2dede;
+            border-color: #fb062f;
+        }
+    </style>
   <div class="flex">
         <form id="signup" class="container" method="POST" action="{% url 'sign_up' %}">
             {% csrf_token %}
@@ -42,6 +65,27 @@
             <br>
         </form>
   </div>
+
+
+  <script>
+    const formErrors = JSON.parse('{{ form_errors|safe }}');
+    let errorMessages = '';
+        for (let field in formErrors) {
+            formErrors[field].forEach(error => {
+                errorMessages += error.message + '\n';
+            });
+        }
+        if (errorMessages) {
+            alert('Form Errors:\n' + errorMessages);
+        }
+
+        const alerts = document.querySelectorAll('.alert');
+            alerts.forEach(alert => {
+                setTimeout(function () {
+                    alert.style.display = 'none';
+                }, 2000);
+            });
+  </script>
 </body>
 </html>
 

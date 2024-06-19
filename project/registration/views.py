@@ -22,9 +22,10 @@ def sign_up(request):
                 else:
                     return redirect('available_books')
         else:
+            form_errors = form.errors.as_json()
             print(form.errors)
             messages.error(request, "Account creation was unsuccessful!", extra_tags= 'unsuccess')
-            return render(request, 'signup_page.html',{'form':form})
+            return render(request, 'signup_page.html',{'form':form, 'form_errors':form_errors})
     form = RegistrationForm()
     return render(request, 'signup_page.html',{'form':form})
 
