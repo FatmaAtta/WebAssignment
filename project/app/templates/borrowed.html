@@ -17,11 +17,12 @@
             <!-- must use .url -->
             <div class="book"><a href="{% url 'book_details' book.book_id %}">
                 <div class="cover"><img src="{{book.cover_page.url}}"></div></a>
-                <a href="{% url 'return_book' book.book_id%}"><button class="returnBook">Return</button></a>
+                <button class="returnBook" value="{{book.book_id}}">Return</button>
             </div>
             {% endfor %}
         </div>
     </div>
+    <script src="{% static 'js/return.js' %}"></script>
     {% endblock %}
 </body>
 </html>

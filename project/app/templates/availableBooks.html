@@ -19,38 +19,41 @@
             <div class="categories">
                 <div class="ctitle">Categories</div>
                 <div class="hidden">
-                    <div class="cat" >Sci-Fi</div>
-                    <div class="cat" >Fantasy</div>
-                    <div class="cat" >Horror</div>
-                    <div class="cat" >Romance</div>
-                    <div class="cat" >History</div>
-                    <div class="cat" >Adventure</div>
-                    <div class="cat" >Thriller</div>
+                    <div class="cat" data-category="Sci-Fi">Sci-Fi</div>
+                    <div class="cat" data-category="Fantasy">Fantasy</div>
+                    <div class="cat" data-category="Horror">Horror</div>
+                    <div class="cat" data-category="Romance">Romance</div>
+                    <div class="cat" data-category="History">History</div>
+                    <div class="cat" data-category="Adventure">Adventure</div>
+                    <div class="cat" data-category="Thriller">Thriller</div>
                 </div>
             </div></a>
         <div class="left search">
-            <button onclick="search()" class="s-button"><img src="{% static 'img/search.png' %}" height="30px"></button>
+            <button onclick="search(query)" class="s-button"><img src="{% static 'img/search.png' %}" height="30px"></button>
             <input type="search" placeholder="Search by title, author, or category ..." name="q" class="search_bar" id="searchInput">
         </div>
         <a href="#name" class="right name">{{letter}}</a>
         <a href="{% url 'logout' %}" class="right signout">Sign Out</a>
     </div>
+    <script src="{% static 'js/filter.js' %}"></script>
     {% block content %}
     <div class="book-flex" id="available-books">
         {%for book in books%}
         <!-- must use .url -->
-        <div class="book"><a href="{% url 'book_details' book.book_id %}">
+        <div class="book" data-book-category="{{ book.category }}" data-title="{{book.name}}" data-author="{{book.author}}"><a href="{% url 'book_details' book.book_id %}">
             <!-- <p>{{ book.name }}</p> -->
             <div class="cover {% if not book.is_available %}unavailable_cover{% endif %}"><img src="{{book.cover_page.url}}"></div></a>
             {% if book.is_available %}
-            <a href="{% url 'borrow' book.book_id %}"><button class="borrow">Borrow</button></a>
+            <button class="borrow" value="{{ book.book_id }}">Borrow</button>
             {% endif %}
             {% if not book.is_available %}
-                <button class="unavailable">Unavailable</button>
+            <button class="unavailable">Unavailable</button>
             {% endif %}
         </div>
         {% endfor %}
     </div>
+    <script src="{% static 'js/borrow.js' %}"></script>
+    <script src="{% static 'js/filter.js' %}"></script>
     {% endblock %}
     <footer class="footer">
         <div class="container">

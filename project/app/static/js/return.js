@@ -1,10 +1,10 @@
-document.querySelectorAll('.borrow').forEach(button=>{button.addEventListener('click',function(){
+document.querySelectorAll('.returnBook').forEach(button=>{button.addEventListener('click',function(){
     console.log("CLICK");
     const id = this.value;
     const data={
         book_id: id,
     };
-    fetch('/borrow/',{
+    fetch('/return_book/',{
         method: 'POST',
         headers:{
             'Content-Type': 'application/json',
@@ -13,14 +13,14 @@ document.querySelectorAll('.borrow').forEach(button=>{button.addEventListener('c
         body: JSON.stringify(data)
     }).then(response=>response.json()).then(data=>{
         if(data.success){
-            alert("Borrowed successfully.");
+            alert("Return successfully.");
             const parentBookElement = button.parentElement;
             if (parentBookElement) {
                 parentBookElement.style.display = 'none';
             }
         }
         else{
-            alert("Borrow failed");
+            alert("Return failed");
         }
     }).catch(error=>{
         console.error('Error:', error);

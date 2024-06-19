@@ -228,9 +228,6 @@ input[type="search"]{
     margin:30px;
 }
 
-/* .hiddenDetails{
-    display: none;
-} */
 
 .borrowBook,.returnBook,.deleteBook{
     display: block;
@@ -261,11 +258,11 @@ input[type="search"]{
     filter: blur(5px);
 }
 
-.borrow{
+.borrow,.returnBook,.deleteBook{
     background-color: #BD804A;
 }
 
-.borrow:hover{
+.borrow:hover,.returnBook,.deleteBook{
     background: bisque;
 }
 
@@ -334,7 +331,7 @@ input[type="search"]{
 } 
 
 .books img {
-    width: 100px;
+    width: 200px;
 }
 
 .books .bestseller{
@@ -365,11 +362,11 @@ input[type="search"]{
 }
 
 .bestseller img{
-    width:50px;
+    width:200px;
     height:200px;
 }
 .recommendations img{
-    width:150px;
+    width:200px;
     height:200px;
 }
 
