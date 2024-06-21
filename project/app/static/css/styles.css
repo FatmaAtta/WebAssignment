@@ -255,7 +255,7 @@ input[type="search"]{
 }
 
 .unavailable_cover{
-    filter: blur(5px);
+    filter: blur(2px);
 }
 
 .borrow,.returnBook,.deleteBook{
@@ -298,9 +298,7 @@ input[type="search"]{
 
 .second-mainpage-header h1{
     text-align: center;
-    /* border: 2px solid red; */
     padding: 10%;
-    /* background-image: url("/book.jpg"); */
     background-size: cover;
     margin-top: 0;
     color: #0e0d0d;
@@ -319,8 +317,8 @@ input[type="search"]{
 
 .books{
     background: white;
-    min-height: 80vh;
-    width: 65%;
+    min-height: 60vh;
+    /* width: 65%; */
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
     border-radius: 2rem;
     display: flex;
@@ -330,9 +328,9 @@ input[type="search"]{
     
 } 
 
-.books img {
+/* .books img {
     width: 200px;
-}
+} */
 
 .books .bestseller{
     display: flex;
@@ -473,10 +471,11 @@ input[type="search"]{
     background-image: linear-gradient(90deg, #2c2c2c , #151517);
     padding: 70px 0;
     margin-top: auto;
+    width:100%;
 }
 
 .footer .container{
-    max-width: 1170px;
+    max-width: 5000px;
     margin: auto;
 }
 
@@ -486,6 +485,7 @@ input[type="search"]{
 
 .footer .footer-col{
     width: 25%;
+    /* width: 100%; */
     padding: 0 15px;
 }
 
@@ -517,6 +517,7 @@ input[type="search"]{
 
 .footer .footer-col li{
     width: fit-content;
+    /* width: 100%; */
     margin-left: -37px;
 }
 

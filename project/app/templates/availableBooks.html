@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Available Books</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <meta name="secmainpage" content="Second mainpage for page for Tale Tower" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    
+    
 </head>
 <body>
     <div class="top_nav">
@@ -29,7 +29,7 @@
                 </div>
             </div></a>
         <div class="left search">
-            <button onclick="search(query)" class="s-button"><img src="{% static 'img/search.png' %}" height="30px"></button>
+            <button onclick="search()" class="s-button"><img src="{% static 'img/search.png' %}" height="30px"></button>
             <input type="search" placeholder="Search by title, author, or category ..." name="q" class="search_bar" id="searchInput">
         </div>
         <a href="#name" class="right name">{{letter}}</a>
@@ -37,6 +37,7 @@
     </div>
     <script src="{% static 'js/filter.js' %}"></script>
     {% block content %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <div class="book-flex" id="available-books">
         {%for book in books%}
         <!-- must use .url -->
